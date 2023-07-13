@@ -30,6 +30,26 @@
                     </a>
                 </li>
 
+                <li class="nav-item @yield('data')">
+                    <a href="#" class="nav-link @yield('nav')">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                            User
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+                        {{-- user --}}
+                        <li class="nav-item">
+                            <a href="{{route('user.index')}}" class="nav-link @yield('user')">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bars nav-icon"></i>
+                                <p>Data User</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
