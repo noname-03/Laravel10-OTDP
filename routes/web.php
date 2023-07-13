@@ -4,7 +4,7 @@ use App\Http\Controllers\OtdpController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RecomendationController;
-
+use App\Http\Controllers\HasilController;
 
 
 Route::get('/', function () {
@@ -25,4 +25,5 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/user', UserController::class);
     Route::resource('/otdp', OtdpController::class);
     Route::get('recomendation', [RecomendationController::class, 'index'])->name('recomendation.index');
+    Route::get('hasil', [HasilController::class, 'index'])->name('hasil.index');
 });

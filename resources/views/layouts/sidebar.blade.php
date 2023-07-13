@@ -50,7 +50,7 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bars nav-icon"></i>
                                 <p>Rekomendasi</p>
                             </a>
-                            <a href="#" class="nav-link @yield('hasil')">
+                            <a href="{{route('hasil.index')}}" class="nav-link @yield('hasil')">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bars nav-icon"></i>
                                 <p>Hasil</p>
                             </a>
