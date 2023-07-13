@@ -46,6 +46,14 @@
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bars nav-icon"></i>
                                 <p>Data Otdp</p>
                             </a>
+                            <a href="{{route('recomendation.index')}}" class="nav-link @yield('recomendation')">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bars nav-icon"></i>
+                                <p>Rekomendasi</p>
+                            </a>
+                            <a href="#" class="nav-link @yield('hasil')">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bars nav-icon"></i>
+                                <p>Hasil</p>
+                            </a>
                         </li>
                     </ul>
                 </li>

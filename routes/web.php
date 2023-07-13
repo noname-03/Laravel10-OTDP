@@ -3,6 +3,7 @@
 use App\Http\Controllers\OtdpController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RecomendationController;
 
 
 
@@ -23,4 +24,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware(['auth'])->group(function () {
     Route::resource('/user', UserController::class);
     Route::resource('/otdp', OtdpController::class);
+    Route::get('recomendation', [RecomendationController::class, 'index'])->name('recomendation.index');
 });

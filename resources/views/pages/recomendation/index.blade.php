@@ -1,7 +1,7 @@
 @extends('layouts.app')
-@section('title', 'Data Otdp')
+@section('title', 'Rekomendasi')
 @section('data.otdp', 'menu-open')
-@section('otdp', 'active')
+@section('recomendation', 'active')
 @section('content')
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Data Otdp</h1>
+                    <h1>Rekomendasi</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -38,7 +38,7 @@
                                         <th>Tempat Tanggal Lahir</th>
                                         <th>Pekerjaan</th>
                                         <th>Destinasi Tujuan</th>
-                                        <th>Aksi</th>
+                                        <th>Hasil</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -51,22 +51,7 @@
                                         <td>{{ $otdp->tempat_lahir }} {{$otdp->tanggal_lahir}}</td>
                                         <td>{{ $otdp->pekerjaan }}</td>
                                         <td>{{ $otdp->destinasi_tujuan }}</td>
-                                        <td style="text-align: center;">
-                                            <form action="{{ route('otdp.destroy', $otdp->id) }}" method="POST">
-                                                @method('DELETE') @csrf
-                                                <div class="btn-group" role="group" aria-label="Basic example">
-                                                    <a href="{{ route('otdp.edit', $otdp->id)}}"
-                                                        class="btn btn-sm btn-outline-secondary">
-                                                        Edit
-                                                    </a>
-                                                    <button type="submit" onclick="return confirm('Are you sure?')"
-                                                        class="btn btn-sm btn-outline-danger">
-                                                        Delete
-                                                    </button>
-                                                </div>
-                                            </form>
-
-                                        </td>
+                                        <td>{{ $otdp->hasil }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -100,10 +85,8 @@
                     columns: 'th:not(:last-child)'
                 }},
                 {
-                extend: 'excel',
-                exportOptions: {
-                    columns: 'th:not(:last-child)'
-                }}],
+                extend: 'excel'
+            }],
         }).buttons().container().appendTo('#example3_wrapper .col-md-6:eq(0)');
     });
 </script>
