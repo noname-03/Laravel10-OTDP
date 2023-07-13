@@ -24,64 +24,53 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    {{-- <section class="content">
+    <section class="content">
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-info">
-                        <div class="inner">
-                            <h3>{{$schedules}}</h3>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><b>LAYANAN PEMBUATAN PENGANTAR BAGI ORANG TERLANTAR DALAM PERJALANAN (OTDP)</b></h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Pelayanan Orang Terlantar Dalam Perjalanan (atau otdp) / merupakan layanan yang diberikan
+                                pemerintah daerah kota cirebon / melalui dinas sosial kepada masyarakat miskin atau
+                                tidak
+                                mampu yang kehabisan ongkos atau bekal / sehingga terlantar di wilayah kota cirebon.
+                                kegiatan ini bertujuan / memberikan bantuan kepada masyarakat miskin atau tidak mampu
+                                yang
+                                terlantar di wilayah kota cirebon / untuk dikembalikan ke daerah asal sebagai bentuk
+                                kepedulian kepada sesama. / tata cara pengembalian “otdp” ini dilakukan bersama dinas
+                                perhubungan melalui upt. terminal harjamukti / yang selanjutnya diberangkatkan ke daerah
+                                asal / baik secara langsung maupun estafet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5><b>Persyaratan Orang Terlantar Dalam Perjalanan (OTDP)</b></h5>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                1. Surat Keterangan Terlantar dari Polsek atau Polres wilayah hukum di Kota Cirebon.
+                                <br>
+                                2. Surat Pengantar dari Dinas Sosial sebelumnya (jika otdp tersebut estafet). <br>
+                                3. Menunjukan KTP asli ataupun fotocopy (Opsional). <br>
+                                Dari 3 persyaratan diatas ada satu persyatan yang wajib orang terlantar bawa yaitu
+                                adalah Surat Keterangan Terlantar dari Polsek atau Polres Wilayah Hukum yang ada di Kota
+                                Cirebon
 
-                            <p>Jadwal</p>
+                            </p>
                         </div>
-                        <div class="icon">
-                            <i class="fas fa-calendar"></i>
-                        </div>
-                        <a href="{{route('schedule.index')}}" class="small-box-footer">More info <i class="fas
-                                fa-arrow-circle-right">
-                            </i></a>
                     </div>
                 </div>
-                @role('admin')
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-success">
-                        <div class="inner">
-                            <h3>{{$classEducation}}</h3>
-                            <p>Kelas</p>
-                        </div>
-                        <div class="icon">
-                            <i class="nav-icon fas fa-graduation-cap"></i>
-                        </div>
-                        <a href="{{route('classEducation.index')}}" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-warning">
-                        <div class="inner">
-                            <h3>{{$user}}</h3>
-
-                            <p>User Registrations</p>
-                        </div>
-                        <div class="icon">
-                            <i class="nav-icon fas fa-user"></i>
-                        </div>
-                        <a href="{{route('user.index')}}" class="small-box-footer">More info <i
-                                class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                @endrole
             </div>
             <!-- /.row -->
         </div><!-- /.container-fluid -->
-    </section> --}}
+    </section>
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
