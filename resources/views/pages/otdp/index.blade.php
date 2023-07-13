@@ -21,11 +21,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
+                        @role('admin')
                         <div class="card-header">
                             <a href="{{ route('otdp.create') }}" type="button" class="btn btn-primary btn-sm">Tambah
                                 Data</a>
-
                         </div>
+                        @endrole
                         <!-- /.card-header -->
                         <div class="card-body">
                             <table id="example3" class="table table-bordered table-striped">
@@ -34,11 +35,15 @@
                                         <th>No.</th>
                                         <th>Nama</th>
                                         <th>No. Kepolisian</th>
+                                        <th>No. Pelapor</th>
+                                        <th>Alamat</th>
                                         <th>Umur</th>
                                         <th>Tempat Tanggal Lahir</th>
                                         <th>Pekerjaan</th>
                                         <th>Destinasi Tujuan</th>
+                                        @role('admin')
                                         <th>Aksi</th>
+                                        @endrole
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -47,14 +52,21 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $otdp->nama }}</td>
                                         <td>{{ $otdp->no_kepolisian }}</td>
+                                        <td>{{ $otdp->no_pelapor }}</td>
+                                        <td>{{ $otdp->alamat }}</td>
                                         <td>{{ $otdp->umur }}</td>
                                         <td>{{ $otdp->tempat_lahir }} {{$otdp->tanggal_lahir}}</td>
                                         <td>{{ $otdp->pekerjaan }}</td>
-                                        <td>{{ $otdp->destinasi_tujuan }}</td>
+                                        <td>{{$otdp->kota}}-{{ $otdp->destinasi_tujuan }}</td>
+                                        @role('admin')
                                         <td style="text-align: center;">
                                             <form action="{{ route('otdp.destroy', $otdp->id) }}" method="POST">
                                                 @method('DELETE') @csrf
                                                 <div class="btn-group" role="group" aria-label="Basic example">
+                                                    <a href="{{asset('file/' . $otdp->nama_file)}}" target="_blank"
+                                                        class="btn btn-sm btn-outline-primary">
+                                                        Foto
+                                                    </a>
                                                     <a href="{{ route('otdp.edit', $otdp->id)}}"
                                                         class="btn btn-sm btn-outline-secondary">
                                                         Edit
@@ -65,8 +77,8 @@
                                                     </button>
                                                 </div>
                                             </form>
-
                                         </td>
+                                        @endrole
                                     </tr>
                                     @endforeach
                                 </tbody>

@@ -40,6 +40,11 @@
                                             required>
                                     </div>
                                     <div class="form-group">
+                                        <label for="exampleInputPassword1">No. Pelapor</label>
+                                        <input type="text" class="form-control" name="no_pelapor"
+                                            placeholder="No. Pelapor" required>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleInputPassword1">Umur</label>
                                         <input type="number" class="form-control" required name="umur"
                                             placeholder="Umur">
@@ -95,11 +100,15 @@
                                             <option value=""></option>
                                         </select>
                                     </div>
-
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Kota</label>
+                                        <input type="text" class="form-control" name="kota" placeholder="kota" required>
+                                    </div>
 
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">File</label>
-                                        <input class="form-control-file" type="file" name="file" id="file" required>
+                                        <input class="form-control-file" type="file" name="file" id="file"
+                                            accept="image/*" required>
                                     </div>
 
                                     <div class="form-group">

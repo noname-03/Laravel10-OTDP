@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Hasil</h1>
+                    <h1>Laporan</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -46,11 +46,12 @@
                                         <th>No.</th>
                                         <th>Nama</th>
                                         <th>No. Kepolisian</th>
+                                        <th>No. Pelapor</th>
+                                        <th>Alamat</th>
                                         <th>Umur</th>
                                         <th>Tempat Tanggal Lahir</th>
                                         <th>Pekerjaan</th>
                                         <th>Destinasi Tujuan</th>
-                                        <th>Hasil</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -59,11 +60,12 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $otdp->nama }}</td>
                                         <td>{{ $otdp->no_kepolisian }}</td>
+                                        <td>{{ $otdp->no_pelapor }}</td>
+                                        <td>{{ $otdp->alamat }}</td>
                                         <td>{{ $otdp->umur }}</td>
-                                        <td>{{ $otdp->tempat_lahir }} {{ $otdp->tanggal_lahir }}</td>
+                                        <td>{{ $otdp->tempat_lahir }} {{$otdp->tanggal_lahir}}</td>
                                         <td>{{ $otdp->pekerjaan }}</td>
-                                        <td>{{ $otdp->destinasi_tujuan }}</td>
-                                        <td>{{ $otdp->hasil }}</td>
+                                        <td>{{$otdp->kota}}-{{ $otdp->destinasi_tujuan }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

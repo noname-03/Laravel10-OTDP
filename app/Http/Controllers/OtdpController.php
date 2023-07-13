@@ -21,6 +21,7 @@ class OtdpController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $destinasi = $request->destinasi_tujuan;
 
         if ($destinasi === 'Jawa') {
@@ -70,13 +71,15 @@ class OtdpController extends Controller
             }
         } else if ($umur >= 15 && $umur <= 30 && $destinasi !== 'Jawa') {
             // Umur 15-30, destinasi luar Jawa, provinsi termasuk dalam kategori jarak jauh,
-            $hasil = 'Jarak JAUH Kondisi Provinsi Jauh'; //done
+            $hasil = 'Jarak Jauh'; //done
         } else if ($umur >= 31 && $umur <= 50 && $destinasi !== 'Jawa' && $pekerjaan === 'Karyawan Swasta') {
             // Umur 31-50, destinasi luar Jawa, provinsi termasuk dalam kategori jarak jauh, dan pekerjaan karyawan swasta
-            $hasil = 'Jarak JAUH Kondisi Provinsi Jauh'; //done
+            $hasil = 'Jarak Jauh'; //done
         } else if ($umur >= 31 && $umur <= 50 && $destinasi !== 'Jawa' && $pekerjaan === 'Ibu Rumah Tangga') {
             // Umur 31-50, destinasi luar Jawa, provinsi termasuk dalam kategori jarak jauh, dan pekerjaan ibu rumah tangga
-            $hasil = 'Jarak JAUH Kondisi Provinsi Jauh'; //done
+            $hasil = 'Jarak Jauh'; //done
+        } elseif ($destinasi == 'Jawa') {
+            $hasil = 'Jarak Dekat';
         } else {
             $hasil = null;
         }
@@ -85,6 +88,8 @@ class OtdpController extends Controller
         $dataOtdp = new Otdp();
         $dataOtdp->nama = $request->nama;
         $dataOtdp->no_kepolisian = $request->no;
+        $dataOtdp->no_pelapor = $request->no_pelapor;
+        $dataOtdp->kota = $request->kota;
         $dataOtdp->umur = $request->umur;
         $dataOtdp->tempat_lahir = $request->tempat_lahir;
         $dataOtdp->tanggal_lahir = $request->tanggal_lahir;
@@ -176,13 +181,18 @@ class OtdpController extends Controller
         } else if ($umur >= 31 && $umur <= 50 && $destinasi !== 'Jawa' && $pekerjaan === 'Ibu Rumah Tangga') {
             // Umur 31-50, destinasi luar Jawa, provinsi termasuk dalam kategori jarak jauh, dan pekerjaan ibu rumah tangga
             $hasil = 'Jarak JAUH Kondisi Provinsi Jauh'; //done
+        } elseif ($destinasi == 'Jawa') {
+            $hasil = 'Jarak Dekat';
         } else {
             $hasil = null;
         }
+
         $dataOtdp->update([
             'nama' => $request->nama,
             'no_kepolisian' => $request->no,
             'umur' => $request->umur,
+            'no_pelapor' => $request->no_pelapor,
+            'kota' => $request->kota,
             'tempat_lahir' => $request->tempat_lahir,
             'tanggal_lahir' => $request->tanggal_lahir,
             'alamat' => $request->alamat,

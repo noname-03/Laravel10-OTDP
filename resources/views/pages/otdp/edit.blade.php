@@ -42,6 +42,11 @@
                                             value="{{$data_otdp->no_kepolisian}}" required>
                                     </div>
                                     <div class="form-group">
+                                        <label for="exampleInputPassword1">No. Pelapor</label>
+                                        <input type="text" class="form-control" name="no_pelapor"
+                                            placeholder="No. Pelapor" value="{{$data_otdp->no_pelapor}}" required>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleInputPassword1">Umur</label>
                                         <input type="number" class="form-control" required name="umur"
                                             value="{{$data_otdp->umur}}" placeholder="Umur">
@@ -127,6 +132,11 @@
                                         <select class="form-control" id="provinsi" name="provinsi">
                                             <option value="{{ $data_otdp->provinsi}}">{{$data_otdp->provinsi}}</option>
                                         </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Kota</label>
+                                        <input type="text" class="form-control" name="kota" placeholder="kota"
+                                            value="{{$data_otdp->kota}}" required>
                                     </div>
 
 

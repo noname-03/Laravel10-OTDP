@@ -33,9 +33,7 @@
                                     <tr>
                                         <th>No.</th>
                                         <th>Nama</th>
-                                        <th>No. Kepolisian</th>
                                         <th>Umur</th>
-                                        <th>Tempat Tanggal Lahir</th>
                                         <th>Pekerjaan</th>
                                         <th>Destinasi Tujuan</th>
                                         <th>Hasil</th>
@@ -46,9 +44,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $otdp->nama }}</td>
-                                        <td>{{ $otdp->no_kepolisian }}</td>
                                         <td>{{ $otdp->umur }}</td>
-                                        <td>{{ $otdp->tempat_lahir }} {{$otdp->tanggal_lahir}}</td>
                                         <td>{{ $otdp->pekerjaan }}</td>
                                         <td>{{ $otdp->destinasi_tujuan }}</td>
                                         <td>{{ $otdp->hasil }}</td>

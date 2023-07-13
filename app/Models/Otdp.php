@@ -14,6 +14,8 @@ class Otdp extends Model
     protected $fillable = [
         'nama',
         'no_kepolisian',
+        'no_pelapor',
+        'kota',
         'umur',
         'tempat_lahir',
         'tanggal_lahir',

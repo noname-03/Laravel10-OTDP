@@ -14,6 +14,8 @@ return new class extends Migration {
             $table->id();
             $table->string('nama');
             $table->string('no_kepolisian');
+            $table->string('no_pelapor');
+            $table->string('kota');
             $table->string('umur');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');

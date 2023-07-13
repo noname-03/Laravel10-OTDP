@@ -34,7 +34,7 @@ class UserTableSeeder extends Seeder
             // password
             'remember_token' => Str::random(10),
         ]);
-        Role::create(['name' => 'user']);
-        $user->assignRole('user');
+        Role::create(['name' => 'ketua']);
+        $user->assignRole('ketua');
     }
 }

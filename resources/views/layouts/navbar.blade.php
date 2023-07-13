@@ -4,8 +4,8 @@
         <li class="nav-item">
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            {{-- <a href="{{ route('home') }}" class="nav-link">Dashboard</a> --}}
+        <li class="nav-item d-none d-sm-inline-block mt-2">
+            <H5>SISTEM PENDUKUNG KEPUTUSAN REKOMENDASI BANTUAN DINAS SOSIAL KOTA CIREBON </H5>
         </li>
     </ul>
 
