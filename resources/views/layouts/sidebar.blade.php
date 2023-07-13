@@ -30,6 +30,26 @@
                     </a>
                 </li>
 
+                <li class="nav-item @yield('data.otdp')">
+                    <a href="#" class="nav-link @yield('nav')">
+                        <i class="nav-icon fas fa-table"></i>
+                        <p>
+                            Data Otdp
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+
+                    <ul class="nav nav-treeview">
+                        {{-- otdp --}}
+                        <li class="nav-item">
+                            <a href="{{route('otdp.index')}}" class="nav-link @yield('otdp')">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-bars nav-icon"></i>
+                                <p>Data Otdp</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li class="nav-item @yield('data')">
                     <a href="#" class="nav-link @yield('nav')">
                         <i class="nav-icon fas fa-user"></i>
