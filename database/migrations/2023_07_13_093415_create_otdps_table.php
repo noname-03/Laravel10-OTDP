@@ -25,6 +25,7 @@ return new class extends Migration {
             $table->string('destinasi_pulau')->nullable();
             $table->string('provinsi');
             $table->string('nama_file');
+            $table->string('foto');
             $table->string('hasil')->nullable();
             $table->timestamps();
         });

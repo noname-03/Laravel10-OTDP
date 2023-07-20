@@ -65,6 +65,10 @@
                                                 <div class="btn-group" role="group" aria-label="Basic example">
                                                     <a href="{{asset('file/' . $otdp->nama_file)}}" target="_blank"
                                                         class="btn btn-sm btn-outline-primary">
+                                                        Dokumen
+                                                    </a>
+                                                    <a href="{{asset('file/' . $otdp->foto)}}" target="_blank"
+                                                        class="btn btn-sm btn-outline-primary">
                                                         Foto
                                                     </a>
                                                     <a href="{{ route('otdp.edit', $otdp->id)}}"
