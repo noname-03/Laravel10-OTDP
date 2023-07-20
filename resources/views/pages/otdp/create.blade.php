@@ -40,14 +40,15 @@
                                             required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">No. Pelapor</label>
-                                        <input type="text" class="form-control" name="no_pelapor"
-                                            placeholder="No. Pelapor" required>
+                                        <label for="exampleInputPassword1">Tanggal Pelapor</label>
+
+                                            <input type="date" class="form-control" required name="no_pelapor">
+
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Umur</label>
+                                        <label for="exampleInputPassword1">Usia</label>
                                         <input type="number" class="form-control" required name="umur"
-                                            placeholder="Umur">
+                                            placeholder="Usia">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Tempat Tanggal Lahir</label>
@@ -106,8 +107,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">File</label>
+                                        <label for="exampleInputPassword1">Dokumen</label>
                                         <input class="form-control-file" type="file" name="file" id="file"
+                                            accept="image/*" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Foto</label>
+                                        <input class="form-control-file" type="file" name="foto" id="file2"
                                             accept="image/*" required>
                                     </div>
 

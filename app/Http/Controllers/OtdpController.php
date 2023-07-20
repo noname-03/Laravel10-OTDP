@@ -25,7 +25,7 @@ class OtdpController extends Controller
         $destinasi = $request->destinasi_tujuan;
 
         if ($destinasi === 'Jawa') {
-            $tujuan = $request->provinsi;
+            $tujuan = $request->provinsi. '-'. $request->kota;
         } else {
             $tujuan = $request->provinsi . '-' . $request->destinasi_pulau;
         }
@@ -34,6 +34,11 @@ class OtdpController extends Controller
         $dok = uniqid() . '.' . 'file' . '.' . $request->file->extension();
         $files->move(public_path('file/'), $dok);
         $file = $dok;
+
+        $file2 = $request->file('foto');
+        $photo = uniqid() . '.' . 'foto' . '.' . $request->foto->extension();
+        $file2->move(public_path('file/'), $photo);
+        $filefoto = $photo;
 
         $provinsiDekat = [
             'Bali',
@@ -81,7 +86,7 @@ class OtdpController extends Controller
         } elseif ($destinasi == 'Jawa') {
             $hasil = 'Jarak Dekat';
         } else {
-            $hasil = null;
+            $hasil = 'Jarak Jauh';
         }
 
         // Simpan data ke database
@@ -99,6 +104,7 @@ class OtdpController extends Controller
         $dataOtdp->destinasi_pulau = $request->destinasi_pulau;
         $dataOtdp->provinsi = $request->provinsi;
         $dataOtdp->nama_file = $file;
+        $dataOtdp->foto = $filefoto;
         $dataOtdp->hasil = $hasil;
         $dataOtdp->save();
 
