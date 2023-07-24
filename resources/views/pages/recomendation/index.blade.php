@@ -22,12 +22,12 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <a href="{{ route('otdp.create') }}" type="button" class="btn btn-primary btn-sm">Tambah
-                                Data</a>
+
 
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
+                            <div class="table-responsive">
                             <table id="example3" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -36,7 +36,6 @@
                                         <th>Umur</th>
                                         <th>Pekerjaan</th>
                                         <th>Destinasi Tujuan</th>
-
                                         <th>Hasil</th>
                                         <th>Nominal</th>
 
@@ -57,13 +56,14 @@
                                         <td>{{ $otdp->nama }}</td>
                                         <td>{{ $otdp->umur }}</td>
                                         <td>{{ $otdp->pekerjaan }}</td>
-                                        <td>{{ $otdp->destinasi_tujuan }}</td>
+                                        <td>{{$otdp->kota}}-{{ $otdp->destinasi_tujuan }}</td>
                                         <td>{{ $otdp->hasil }}</td>
                                         <td>Rp.{{ $nominal }}.000</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                         <!-- /.card-body -->
                     </div>

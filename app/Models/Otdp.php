@@ -25,6 +25,7 @@ class Otdp extends Model
         'destinasi_pulau',
         'provinsi',
         'nama_file',
+        'foto',
         'hasil',
     ];
 }

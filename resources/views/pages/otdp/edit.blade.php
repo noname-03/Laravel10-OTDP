@@ -141,8 +141,14 @@
 
 
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">File</label>
-                                        <input class="form-control-file" type="file" name="file" id="file">
+                                        <label for="exampleInputPassword1">Dokumen</label>
+                                        <input class="form-control-file" type="file" name="file" id="file"
+                                            accept="image/*" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Foto</label>
+                                        <input class="form-control-file" type="file" name="foto" id="file2"
+                                            accept="image/*" required>
                                     </div>
 
                                     <div class="form-group">
