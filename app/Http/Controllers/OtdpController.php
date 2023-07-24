@@ -73,6 +73,8 @@ class OtdpController extends Controller
                 // Umur 31-50, destinasi luar Jawa, provinsi termasuk dalam kategori jarak dekat, dan pekerjaan buruh
                 $hasil = 'Jarak Dekat';
 
+            }else{
+                $hasil = 'Jarak Jauh';
             }
         } else if ($umur >= 15 && $umur <= 30 && $destinasi !== 'Jawa') {
             // Umur 15-30, destinasi luar Jawa, provinsi termasuk dalam kategori jarak jauh,
@@ -144,6 +146,16 @@ class OtdpController extends Controller
             $file = $dataOtdp->nama_file;
         }
 
+        if ($request->hasFile('file')) {
+            $file2 = $request->file('foto');
+            $photo = uniqid() . '.' . 'foto' . '.' . $request->foto->extension();
+            $file2->move(public_path('file/'), $photo);
+            $filefoto = $photo;
+
+            File::delete('file/' . $dataOtdp->foto);
+        } else {
+            $filefoto = $dataOtdp->foto;
+        }
         $provinsiDekat = [
             'Bali',
             'Kalimantan Selatan',
@@ -177,6 +189,8 @@ class OtdpController extends Controller
                 // Umur 31-50, destinasi luar Jawa, provinsi termasuk dalam kategori jarak dekat, dan pekerjaan buruh
                 $hasil = 'Jarak Dekat';
 
+            }else{
+                $hasil = 'Jarak Jauh';
             }
         } else if ($umur >= 15 && $umur <= 30 && $destinasi !== 'Jawa') {
             // Umur 15-30, destinasi luar Jawa, provinsi termasuk dalam kategori jarak jauh,
@@ -190,7 +204,8 @@ class OtdpController extends Controller
         } elseif ($destinasi == 'Jawa') {
             $hasil = 'Jarak Dekat';
         } else {
-            $hasil = null;
+                $hasil = 'Jarak Jauh';
+;
         }
 
         $dataOtdp->update([
@@ -207,6 +222,7 @@ class OtdpController extends Controller
             'destinasi_pulau' => $request->destinasi_pulau,
             'provinsi' => $request->provinsi,
             'nama_file' => $file,
+            'foto' => $filefoto,
             'hasil' => $hasil,
         ]);
 

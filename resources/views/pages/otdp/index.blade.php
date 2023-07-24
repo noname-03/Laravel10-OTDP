@@ -35,7 +35,7 @@
                                         <th>No.</th>
                                         <th>Nama</th>
                                         <th>No. Kepolisian</th>
-                                        <th>No. Pelapor</th>
+                                        <th>Tgl. Pelapor</th>
                                         <th>Alamat</th>
                                         <th>Umur</th>
                                         <th>Tempat Tanggal Lahir</th>
