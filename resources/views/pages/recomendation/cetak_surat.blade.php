@@ -1,4 +1,4 @@
-<body onload="javascript:window.print()" style="margin: auto; width:60%">
+<body onload="javascript:window.print()" style="margin: auto; width:40%">
 <div style="margin-left: 10px; margin-right: 10px;"></div>
 
 <p>&nbsp;</p>
@@ -20,6 +20,8 @@
     </tr>
 </table>
 <div style="margin: 0; padding: 0;"><hr style="width: 100%; border: 2px solid black;"></div>
+<p align="justify">&nbsp &nbsp &nbsp Bedasarkan Surat Keterangan Polri Jawa Barat Resor Cirebon Kota Sektor Nomor : {{ $data_otdp->no_kepolisian }} Tanggal {{ $data_otdp->no_pelapor }} Perihal Permohonan bantuan / pertolongan Orang Terlantar Diperjalanan ke Tempat asalnya, maka dengan ini kami hadapkan kepada saudara:</p>
+      <div style="width: 50%; text-align: left; float: right;"></div><br>
 
         <table>
             <tr>
@@ -50,13 +52,13 @@
 
         </table>
 
-        <p>&nbsp &nbsp &nbsp Setelah kami mengadakan wawancara seperlunya, ternyata yang bersangkutan di Kota Cirebon dalam keadaan terlantar dan tidak mempunyai sanak saudara. Sehubungan anggaran pemulangan orang terlantar di perjalanan sangat terbatas, dengan ini kami mohon bentuan saudara agar klien tersebut dapat diikut sertakan dalam angkutan bus menuju</p>
-        <p>&nbsp &nbsp &nbsp Demikian surat keterangan ini dibuat untuk dipergunakan untuk dipergunakan sebagaimana mestinya dan atas kerjasamanya kami ucapkan terima kasih</p>
+        <p align="justify">&nbsp &nbsp &nbsp Setelah kami mengadakan wawancara seperlunya, ternyata yang bersangkutan di Kota Cirebon dalam keadaan terlantar dan tidak mempunyai sanak saudara. Sehubungan anggaran pemulangan orang terlantar di perjalanan sangat terbatas, dengan ini kami mohon bentuan saudara agar klien tersebut dapat diikut sertakan dalam angkutan bus menuju</p>
+        <p align="justify">&nbsp &nbsp &nbsp Demikian surat keterangan ini dibuat untuk dipergunakan untuk dipergunakan sebagaimana mestinya dan atas kerjasamanya kami ucapkan terima kasih</p>
         <div style="width: 50%; text-align: left; float: right;"></div><br>
         <div style="width: 50%; text-align: left; float: right;"><b>KOTA CIREBON</b></div><br>
         <div style="width: 50%; text-align: left; float: right;"><b>Sub koodinator Perlindungan dan Jamsos</b></div><br><br><br><br><br>
         <div style="width: 50%; text-align: left; float: right;">MEISI SULIZA ,S.Pi</div><br>
         <div style="width: 50%; text-align: left; float: right;">NIP. 19720523 199903 2 002</div>
-
+<br><br><br><br>
 </body>
         {{-- <?php echo date("d M Y") ?> --}}
