@@ -25,5 +25,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('/user', UserController::class);
     Route::resource('/otdp', OtdpController::class);
     Route::get('recomendation', [RecomendationController::class, 'index'])->name('recomendation.index');
+    Route::get('recomendationCetak/{id}', [RecomendationController::class, 'cetakSurat'])->name('recomendation.cetakSurat');
     Route::get('hasil', [HasilController::class, 'index'])->name('hasil.index');
 });

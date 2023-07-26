@@ -12,4 +12,10 @@ class RecomendationController extends Controller
         $data_otdps = Otdp::latest()->get();
         return view('pages.recomendation.index', compact('data_otdps'));
     }
+    public function cetakSurat($id){
+        $data_otdp = Otdp::findOrFail($id);
+        // dd($data_otdp);
+        return view('pages.recomendation.cetak_surat', compact('data_otdp'));
+
+}
 }
