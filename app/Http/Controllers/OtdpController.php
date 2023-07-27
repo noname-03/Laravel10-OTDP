@@ -25,7 +25,7 @@ class OtdpController extends Controller
         $destinasi = $request->destinasi_tujuan;
 
         if ($destinasi === 'Jawa') {
-            $tujuan = $request->provinsi. '-'. $request->kota;
+            $tujuan = $request->provinsi;
         } else {
             $tujuan = $request->provinsi . '-' . $request->destinasi_pulau;
         }
@@ -126,6 +126,7 @@ class OtdpController extends Controller
 
     public function update(Request $request, $id)
     {
+
         $dataOtdp = Otdp::findOrFail($id);
         $destinasi = $request->destinasi_tujuan;
 
