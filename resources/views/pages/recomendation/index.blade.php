@@ -22,6 +22,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
+                            <div class="card-header">
 
 
                         </div>
@@ -36,29 +37,34 @@
                                         <th>Umur</th>
                                         <th>Pekerjaan</th>
                                         <th>Destinasi Tujuan</th>
-                                        <th>Hasil</th>
-                                        <th>Nominal</th>
+                                        <th>Aksi</th>
+                                        {{-- <th>Hasil</th>
+                                        <th>Nominal</th> --}}
 
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($data_otdps as $otdp)
-                                    @php
+                                    {{-- @php
                                 $nominal = 0;
                                 if ($otdp->hasil == 'Jarak Dekat') {
                                     $nominal = 120.000;
                                 } else {
                                     $nominal = 150.000;
                                 }
-                            @endphp
+                            @endphp --}}
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $otdp->nama }}</td>
                                         <td>{{ $otdp->umur }}</td>
                                         <td>{{ $otdp->pekerjaan }}</td>
                                         <td>{{$otdp->kota}}-{{ $otdp->destinasi_tujuan }}</td>
-                                        <td>{{ $otdp->hasil }}</td>
-                                        <td>Rp.{{ $nominal }}.000</td>
+                                        <td><a href="{{ route('recomendation.cetakSurat', $otdp->id)}}"
+                                            class="btn btn-sm btn-outline-secondary">
+                                            Edit
+                                        </a></td>
+                                        {{-- <td>{{ $otdp->hasil }}</td>
+                                        <td>Rp.{{ $nominal }}.000</td> --}}
                                     </tr>
                                     @endforeach
                                 </tbody>
