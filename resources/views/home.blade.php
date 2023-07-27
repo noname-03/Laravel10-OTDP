@@ -34,16 +34,16 @@
                             <h5><b>LAYANAN PEMBUATAN PENGANTAR BAGI ORANG TERLANTAR DALAM PERJALANAN (OTDP)</b></h5>
                         </div>
                         <div class="card-body">
-                            <p>Pelayanan Orang Terlantar Dalam Perjalanan (atau otdp) / merupakan layanan yang diberikan
-                                pemerintah daerah kota cirebon / melalui dinas sosial kepada masyarakat miskin atau
+                            <p>&nbsp&nbsp&nbspPelayanan Orang Terlantar Dalam Perjalanan (otdp) merupakan layanan yang diberikan
+                                pemerintah daerah kota cirebon melalui dinas sosial kepada masyarakat miskin atau
                                 tidak
-                                mampu yang kehabisan ongkos atau bekal / sehingga terlantar di wilayah kota cirebon.
-                                kegiatan ini bertujuan / memberikan bantuan kepada masyarakat miskin atau tidak mampu
+                                mampu yang kehabisan ongkos atau bekal sehingga terlantar di wilayah kota cirebon.
+                                kegiatan ini bertujuan memberikan bantuan kepada masyarakat miskin atau tidak mampu
                                 yang
-                                terlantar di wilayah kota cirebon / untuk dikembalikan ke daerah asal sebagai bentuk
-                                kepedulian kepada sesama. / tata cara pengembalian “otdp” ini dilakukan bersama dinas
-                                perhubungan melalui upt. terminal harjamukti / yang selanjutnya diberangkatkan ke daerah
-                                asal / baik secara langsung maupun estafet.
+                                terlantar di wilayah kota cirebon untuk dikembalikan ke daerah asal sebagai bentuk
+                                kepedulian kepada sesama. tata cara pengembalian “otdp” ini dilakukan bersama dinas
+                                perhubungan melalui upt. terminal harjamukti yang selanjutnya diberangkatkan ke daerah
+                                asal baik secara langsung maupun estafet.
                             </p>
                         </div>
                     </div>
