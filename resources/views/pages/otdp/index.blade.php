@@ -47,7 +47,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
                                     @foreach ($data_otdps as $otdp)
+                                    @php $tanggal_lahir = $otdp->tanggal_lahir;
+
+                                    $tanggal_lahir_formatted = date("d-m-Y", strtotime($tanggal_lahir));
+                                    @endphp
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $otdp->nama }}</td>
@@ -55,7 +60,7 @@
                                         <td>{{ $otdp->no_pelapor }}</td>
                                         <td>{{ $otdp->alamat }}</td>
                                         <td>{{ $otdp->umur }}</td>
-                                        <td>{{ $otdp->tempat_lahir }} {{$otdp->tanggal_lahir}}</td>
+                                        <td>{{ $otdp->tempat_lahir }} {{$tanggal_lahir_formatted}}</td>
                                         <td>{{ $otdp->pekerjaan }}</td>
                                         <td>{{$otdp->kota}}-{{ $otdp->destinasi_tujuan }}</td>
                                         @role('admin')

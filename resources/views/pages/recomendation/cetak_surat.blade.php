@@ -1,8 +1,12 @@
-<body onload="javascript:window.print()" style="margin: auto; width:40%">
+<body onload="javascript:window.print()" style="margin: auto; width:90%">
 <div style="margin-left: 10px; margin-right: 10px;"></div>
 
 <p>&nbsp;</p>
+@php
+$nolapor = $data_otdp->no_pelapor;
 
+$nolapor_formatted = date("d-m-Y", strtotime($nolapor));
+@endphp
 <table width="100%" align="center" cellpadding="0" cellspacing="0">
 	<tr>
 		<td rowspan="3"><div align="center"><img src="{{ asset('admin/dist/images/KotaCirebon.png') }}" width="100" height="100"></div></td>
@@ -20,9 +24,22 @@
     </tr>
 </table>
 <div style="margin: 0; padding: 0;"><hr style="width: 100%; border: 2px solid black;"></div>
-<p align="justify">&nbsp &nbsp &nbsp Bedasarkan Surat Keterangan Polri Jawa Barat Resor Cirebon Kota Sektor Nomor : {{ $data_otdp->no_kepolisian }} Tanggal {{ $data_otdp->no_pelapor }} Perihal Permohonan bantuan / pertolongan Orang Terlantar Diperjalanan ke Tempat asalnya, maka dengan ini kami hadapkan kepada saudara:</p>
+<p align="justify">&nbsp &nbsp &nbsp Bedasarkan Surat Keterangan Polri Jawa Barat Resor Cirebon Kota Sektor Nomor : {{ $data_otdp->no_kepolisian }} Tanggal {{ $nolapor_formatted }} Perihal Permohonan bantuan / pertolongan Orang Terlantar Diperjalanan ke Tempat asalnya, maka dengan ini kami hadapkan kepada saudara:</p>
       <div style="width: 50%; text-align: left; float: right;"></div><br>
+       @php
+       $tanggal_lahir = $data_otdp->tanggal_lahir;
 
+$tanggal_lahir_formatted = date("d-m-Y", strtotime($tanggal_lahir));
+
+
+
+                                $nominal = 0;
+                                if ($data_otdp->hasil == 'Jarak Dekat') {
+                                    $nominal = 120.000;
+                                } else {
+                                    $nominal = 150.000;
+                                }
+                            @endphp
         <table>
             <tr>
                 <td style="width: 30%;">Nama</td>
@@ -32,12 +49,12 @@
             <tr>
                 <td style="width: 30%;">Tempat, tanggal lahir</td>
                 <td style="width: 5%;">:</td>
-                <td style="width: 65%;">{{ $data_otdp->tempat_lahir }},{{$data_otdp->tanggal_lahir}}</td>
+                <td style="width: 65%;">{{ $data_otdp->tempat_lahir }}, {{$tanggal_lahir_formatted}}</td>
             </tr>
             <tr>
                 <td style="width: 30%;">Pekerjaan</td>
                 <td style="width: 5%;">:</td>
-                <td style="width: 65%;">Guru</td>
+                <td style="width: 65%;">{{$data_otdp->pekerjaan }}</td>
             </tr>
             <tr>
                 <td style="width: 30%; vertical-align: top;">Alamat</td>
@@ -49,6 +66,17 @@
                 <td style="width: 5%; vertical-align: top;">:</td>
                 <td style="width: 65%;">{{$data_otdp->kota}}-{{ $data_otdp->destinasi_tujuan }}</td>
             </tr>
+              <tr>
+                <td style="width: 30%; vertical-align: top;">Hasil Algoritma C4.5 </td>
+                <td style="width: 5%; vertical-align: top;">:</td>
+                <td style="width: 65%;">{{$data_otdp->hasil}}</td>
+            </tr>
+              <tr>
+                <td style="width: 30%; vertical-align: top;">Nomial </td>
+                <td style="width: 5%; vertical-align: top;">:</td>
+                <td style="width: 65%;">Rp.{{$nominal}}.000</td>
+            </tr>
+
 
         </table>
 

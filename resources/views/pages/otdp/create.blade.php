@@ -102,8 +102,8 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Kota</label>
-                                        <input type="text" class="form-control" name="kota" placeholder="kota" required>
+                                        <label for="exampleInputPassword1">Kota / Kabupaten</label>
+                                        <input type="text" class="form-control" name="kota" placeholder="Kota/Kabupaten" required>
                                     </div>
 
                                     <div class="form-group">
