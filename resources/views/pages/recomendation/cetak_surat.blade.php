@@ -24,7 +24,7 @@ $nolapor_formatted = date("d-m-Y", strtotime($nolapor));
     </tr>
 </table>
 <div style="margin: 0; padding: 0;"><hr style="width: 100%; border: 2px solid black;"></div>
-<p align="justify">&nbsp &nbsp &nbsp Bedasarkan Surat Keterangan Polri Jawa Barat Resor Cirebon Kota Sektor Nomor : {{ $data_otdp->no_kepolisian }} Tanggal {{ $nolapor_formatted }} Perihal Permohonan bantuan / pertolongan Orang Terlantar Diperjalanan ke Tempat asalnya, maka dengan ini kami hadapkan kepada saudara:</p>
+<p align="justify">&nbsp &nbsp &nbsp Bedasarkan Surat Keterangan Nomor : {{ $data_otdp->no_kepolisian }} Tanggal {{ $nolapor_formatted }} Perihal Permohonan bantuan / pertolongan Orang Terlantar Diperjalanan ke Tempat asalnya, maka dengan ini kami hadapkan kepada saudara:</p>
       <div style="width: 50%; text-align: left; float: right;"></div><br>
        @php
        $tanggal_lahir = $data_otdp->tanggal_lahir;
@@ -72,7 +72,7 @@ $tanggal_lahir_formatted = date("d-m-Y", strtotime($tanggal_lahir));
                 <td style="width: 65%;">{{$data_otdp->hasil}}</td>
             </tr>
               <tr>
-                <td style="width: 30%; vertical-align: top;">Nomial </td>
+                <td style="width: 30%; vertical-align: top;">Nominal </td>
                 <td style="width: 5%; vertical-align: top;">:</td>
                 <td style="width: 65%;">Rp.{{$nominal}}.000</td>
             </tr>
