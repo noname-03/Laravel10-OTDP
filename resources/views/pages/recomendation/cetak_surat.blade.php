@@ -52,6 +52,11 @@ $tanggal_lahir_formatted = date("d-m-Y", strtotime($tanggal_lahir));
                 <td style="width: 65%;">{{ $data_otdp->tempat_lahir }}, {{$tanggal_lahir_formatted}}</td>
             </tr>
             <tr>
+                <td style="width: 30%;">Umur</td>
+                <td style="width: 5%;">:</td>
+                <td style="width: 65%;">{{ $data_otdp->umur }}</td>
+            </tr>
+            <tr>
                 <td style="width: 30%;">Pekerjaan</td>
                 <td style="width: 5%;">:</td>
                 <td style="width: 65%;">{{$data_otdp->pekerjaan }}</td>

@@ -45,11 +45,7 @@
                                             <input type="date" class="form-control" required name="no_pelapor">
 
                                     </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputPassword1">Usia</label>
-                                        <input type="number" class="form-control" required name="umur"
-                                            placeholder="Usia">
-                                    </div>
+
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Tempat Tanggal Lahir</label>
                                         <div class="row">
@@ -58,9 +54,14 @@
                                                     placeholder="Contoh : Cirebon">
                                             </div>
                                             <div class="col-8">
-                                                <input type="date" class="form-control" required name="tanggal_lahir">
+                                                <input type="date" class="form-control" required name="tanggal_lahir" id="tanggal_lahir">
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Usia</label>
+                                        <input type="number" class="form-control" required name="umur" id="umur"
+                                            readonly>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Alamat</label>
@@ -222,6 +223,22 @@ function showProvinsiNonJawa(pulau) {
 // Menampilkan provinsi Jawa secara default
 showProvinsiJawa();
 
+//// Umur
+
+document.getElementById('tanggal_lahir').addEventListener('change', function() {
+        // Ambil tanggal lahir dari input
+        var ttl = new Date(this.value);
+
+        // Hitung usia berdasarkan tanggal lahir
+        var today = new Date();
+        var age = today.getFullYear() - ttl.getFullYear();
+        if (today.getMonth() < ttl.getMonth() || (today.getMonth() === ttl.getMonth() && today.getDate() < ttl.getDate())) {
+            age--;
+        }
+
+        // Tampilkan hasil perhitungan umur
+        document.getElementById('umur').value = age;
+    });
 
 </script>
 @endpush
